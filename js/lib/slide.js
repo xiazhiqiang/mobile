@@ -28,7 +28,7 @@ define(['zepto'], function ($) {
         length: 0,
 
         eachSlideWidth: 0,
-        timerInterval: 10,
+        timerInterval: 8,
 
         init: function (id) {
             id = id || 'slide';// 默认轮播div ID
@@ -82,7 +82,7 @@ define(['zepto'], function ($) {
          */
         bindEvent: function () {
             // 绑定移动端左划和右划事件
-            $(this.slide).find('img').swipeLeft(this.swipeLeft).swipeRight(this.swipeRight);
+            $(this.slide).find('img').swipeLeft($.proxy(this.swipeLeft, this)).swipeRight($.proxy(this.swipeRight, this));
         },
 
         /**
@@ -91,7 +91,7 @@ define(['zepto'], function ($) {
         swipeLeft: function () {
             console.log('swipeLeft');
 
-            var that = Slide;
+            var that = this;
 
             // 更新指针
             that.prevSlideIndex = that.currentSlideIndex;
@@ -141,7 +141,7 @@ define(['zepto'], function ($) {
         swipeRight: function () {
             console.log('swipeRight');
 
-            var that = Slide;
+            var that = this;
 
             // 更新指针
             that.nextSlideIndex = that.currentSlideIndex;
@@ -184,6 +184,8 @@ define(['zepto'], function ($) {
                 }
             }, that.timerInterval);
         },
+
+
 
         /**
          * 图片预加载

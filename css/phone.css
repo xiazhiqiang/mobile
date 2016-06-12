@@ -10,7 +10,7 @@ body {
     top: 0;
     margin: 0 auto;
     width: 100%;
-    height: 6rem;
+    height: 3rem;
     background: #1eb5b5;
 }
 
@@ -18,33 +18,32 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 6rem;
-    height: 6rem;
-    margin: 0 0 0 -3rem;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0 0 -1.5rem;
 }
 
 .header .portrait img {
-    width: 8rem;
-    height: auto;
+    width: 4rem;
+    height: 4rem;
 }
 
 .content {
-    margin: 5rem auto 0;
+    margin: 2rem auto 0;
     width: 100%;
     text-align: center;
 }
 
 .profile {
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 .profile p {
     margin: 0 auto;
     padding: 1rem 0;
     width: 70%;
-    font-size: 2rem;
 }
 .portfolio h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 1rem 0;
 }
 
@@ -53,9 +52,10 @@ body {
 }
 
 .slide-pictures {
-    margin: 5rem auto;
-    width: 46rem;
-    height: 52rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 16rem;
+    height: 20rem;
     overflow: hidden;
 }
 
@@ -66,22 +66,22 @@ body {
 }
 .slide-pictures ul li {
     float: left;
-    width: 46rem;
+    width: 16rem;
     height: 100%;
     text-align: center;
     position: relative;
 }
 .slide-pictures li img {
-    width: 46rem;
+    width: 16rem;
     height: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin: -26rem 0 0 -23rem;
+    margin: -10rem 0 0 -8rem;
 }
 
 .slide-pictures img.process {
-    width: 3rem;
-    height: 3rem;
-    margin: -1.5rem 0 0 -1.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: -.8rem 0 0 -.8rem;
 }
