@@ -30,9 +30,12 @@ define(['zepto'], function ($) {
         eachSlideWidth: 0,
         timerInterval: 8,
 
-        init: function (id) {
-            id = id || 'slide';// 默认轮播div ID
-            this.initData(id);
+        init: function (data) {
+            data = data || {};
+            data.id = data.id || 'slide';// 默认轮播wrapper div ID
+            data.images = data.images || ['images/scenery1.png', 'images/scenery2.png', 'images/scenery3.png', 'images/scenery4.png'];
+
+            this.initData(data);
             this.renderView();
             this.bindEvent();
         },
@@ -40,10 +43,10 @@ define(['zepto'], function ($) {
         /**
          * 初始化数据
          */
-        initData: function (id) {
-            this.slide = document.getElementById(id);
+        initData: function (data) {
+            this.slide = document.getElementById(data.id);
             this.eachSlideWidth = this.slide.clientWidth;
-            this.imagesArr = ['images/scenery1.png', 'images/scenery2.png', 'images/scenery3.png', 'images/scenery4.png'];
+            this.imagesArr = data.images;
             this.length = this.imagesArr.length;
 
             this.nextSlideIndex = this.length > 0 ? 1 : 0;
@@ -184,8 +187,6 @@ define(['zepto'], function ($) {
                 }
             }, that.timerInterval);
         },
-
-
 
         /**
          * 图片预加载

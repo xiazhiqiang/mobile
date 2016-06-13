@@ -10,5 +10,7 @@ require(['zepto', 'slide'], function($, slide){
     console.log('load zepto');
 
     // 初始化轮播组件
-    slide.init('slide');
+    $.getJSON('http://127.0.0.1:8888/git/mobile/data.php', function(data) {
+        slide.init({id: 'slide', images: data});
+    });
 });
